@@ -5,7 +5,7 @@
     <xacro:include filename="fingeredu_macro.xacro" />
     <xacro:include filename="../macros.xacro" />
 
-    <xacro:property name="distance_to_ground" value="${0.363 - 0.08}" />
+    <xacro:property name="distance_to_ground" value="${0.362 - 0.08}" />
     <xacro:property name="distance_to_center" value="-${offset_x_base_to_front + 0.02}" />
     <xacro:property name="angle_0" value="${radians(0)}"/>
     <xacro:property name="angle_120" value="${radians(120)}"/>

@@ -87,7 +87,7 @@
                      that it is similar enough. -->
                 <!-- CoM is only estimated based -->
                 <origin rpy="0 0 0" xyz="-0.079 0 0"/>
-                <mass value="0.14854"/>
+                <mass value="0.157"/>
                 <inertia izz="0.00041" iyz="0.00000" ixz="0.00000"
                                        iyy="0.00041" ixy="0.00005"
                                                      ixx="0.00003" />
@@ -104,7 +104,7 @@
 
             <inertial>
                 <origin rpy="0 0 0" xyz="0 -0.019 -0.079"/>
-                <mass value="0.14854"/>
+                <mass value="0.16"/>
                 <inertia ixx="0.00041" ixy="0.00000" ixz="0.00000"
                                        iyy="0.00041" iyz="0.00005"
                                                      izz="0.00003" />
@@ -124,7 +124,7 @@
                  lower link. -->
             <inertial>
                 <origin rpy="0 0 0" xyz="0 -0.009 -0.089"/>
-                <mass value="0.03070"/>
+                <mass value="0.035"/>
                 <inertia ixx="0.00012" ixy="0.00000" ixz="0.00000"
                                        iyy="0.00012" iyz="0.00000"
                                                      izz="0.00000" />
@@ -154,7 +154,7 @@
         <joint name="finger_base_to_upper_joint${suffix}" type="revolute">
             <parent link="finger_base_link${suffix}"/>
             <child link="finger_upper_link${suffix}"/>
-            <limit effort="1000" lower="-${pi/2}" upper="${pi/2}" velocity="1000"/>
+            <limit effort="0.36" lower="-${pi/2}" upper="${pi/2}" velocity="20"/>
             <axis xyz="-1 0 0"/>
             <origin rpy="0 0 0" xyz="0 0 0"/>
         </joint>
@@ -162,7 +162,7 @@
         <joint name="finger_upper_to_middle_joint${suffix}" type="revolute">
             <parent link="finger_upper_link${suffix}"/>
             <child link="finger_middle_link${suffix}"/>
-            <limit effort="1000" lower="-${pi/2}" upper="${pi/2}" velocity="1000"/>
+            <limit effort="0.36" lower="-${pi/2}" upper="${pi/2}" velocity="20"/>
             <axis xyz="0 1 0"/>
             <origin rpy="0 0 0" xyz="0 -0.014 0"/>
         </joint>
@@ -170,7 +170,7 @@
         <joint name="finger_middle_to_lower_joint${suffix}" type="revolute">
             <parent link="finger_middle_link${suffix}"/>
             <child link="finger_lower_link${suffix}"/>
-            <limit effort="1000" lower="-${pi}" upper="${pi}" velocity="1000"/>
+            <limit effort="0.36" lower="-${pi}" upper="${pi}" velocity="20"/>
             <axis xyz="0 1 0"/>
             <origin rpy="0 0 0" xyz="0 -0.03745 -0.16"/>
         </joint>
